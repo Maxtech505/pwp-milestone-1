@@ -1,12 +1,12 @@
-html { display: flex;}
-body { width: 100%;}
 
-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    /* display: block; */
-    padding: 115px;
+
+body {
+    width: 80%;
+    text-align: left;
     background-color: darkslategrey;
     color: palevioletred;
+}
+
+.wrapper {
+    text-align: center;
 }
