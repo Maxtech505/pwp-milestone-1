@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscura Relic Alchemy - Wireframe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Basic CSS for Wireframe - can be expanded or replaced with Tailwind classes */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light grey background for wireframe */
+            color: #333; /* Dark grey text */
+        }
+
+        header, section, footer {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff; /* White sections */
+            border: 1px solid #ccc; /* Light grey borders for sections */
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #555; /* Slightly darker grey for headings */
+        }
+
+        .gallery {
+            display: flex; /* Or grid, depending on desired layout */
+            gap: 10px;
+            overflow-x: auto; /* For horizontal scrolling gallery */
+            padding: 10px;
+            border: 1px dashed #aaa; /* Dashed border to represent gallery area */
+            margin-top: 10px;
+        }
+
+        .gallery-item {
+            width: 150px; /* Example item size */
+            height: 100px; /* Example item size */
+            background-color: #eee; /* Placeholder grey for gallery items */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #777; /* Lighter grey text for placeholders */
+            font-size: 0.8em;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column form on small screens */
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px; /* Example textarea height */
+        }
+
+        .contact-form button {
+            background-color: #eee;
+            color: #555;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ddd;
+        }
+
+        /* Responsive adjustments - similar to your original CSS but simplified for wireframe */
+        @media (min-width: 768px) {
+            .gallery {
+                display: flex; /* Horizontal scroll on larger screens */
+            }
+            .contact-form {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens for form fields */
+                max-width: 600px; /* Example max width for form */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .contact-form textarea {
+                grid-column: 1 / span 2; /* Textarea spans both columns */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Obscura Relic Alchemy</h1>
+    <p>Tagline: Trade treasures, discover relics, and revive nostalgia.</p>
+</header>
+
+<section id="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <div class="gallery-item">Image Placeholder</div>
+        <div class="gallery-item">Image Placeholder</div>
+        <div class="gallery-item">Image Placeholder</div>
+        <div class="gallery-item">Image Placeholder</div>
+        <div class="gallery-item">Image Placeholder</div>
+        <div class="gallery-item">Image Placeholder</div>
+    </div>
+</section>
+
+<section id="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <input type="tel" placeholder="Phone (Optional)">
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</body>
+</html>
