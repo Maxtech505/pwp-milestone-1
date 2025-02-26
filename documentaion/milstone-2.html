@@ -1,117 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obscura Relic Alchemy - Wireframe</title>
+    <title>Obscura Relic Alchemy - Wireframe with Carousels</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Basic CSS for Wireframe - can be expanded or replaced with Tailwind classes */
         body {
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Light grey background for wireframe */
-            color: #333; /* Dark grey text */
+            background-color: #1a202c;
+            color: #e2e8f0;
+            background-image: url('https://www.transparenttextures.com/patterns/rusted-metal.png'); /* Add a rusty background texture */
         }
 
         header, section, footer {
             margin: 20px;
             padding: 20px;
-            background-color: #fff; /* White sections */
-            border: 1px solid #ccc; /* Light grey borders for sections */
+            background-color: #2d3748;
+            border: 1px solid #4a5568;
             border-radius: 5px;
         }
 
         h1, h2 {
-            color: #555; /* Slightly darker grey for headings */
+            color: #cbd5e0;
         }
 
-        .gallery {
-            display: flex; /* Or grid, depending on desired layout */
-            gap: 10px;
-            overflow-x: auto; /* For horizontal scrolling gallery */
-            padding: 10px;
-            border: 1px dashed #aaa; /* Dashed border to represent gallery area */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
             margin-top: 10px;
+            border: 1px dashed #6b7280;
+            padding: 10px;
         }
 
-        .gallery-item {
-            width: 150px; /* Example item size */
-            height: 100px; /* Example item size */
-            background-color: #eee; /* Placeholder grey for gallery items */
-            border: 1px solid #ddd;
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 0;
+            width: 100%;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 200px;
+            background-color: #4a5568;
+            border: 1px solid #718096;
             border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #777; /* Lighter grey text for placeholders */
+            color: #a0aec0;
             font-size: 0.8em;
+            scroll-snap-align: start;
+            text-align: center;
+            padding: 10px;
         }
 
         .contact-form {
             display: grid;
-            grid-template-columns: 1fr; /* Single column form on small screens */
+            grid-template-columns: 1fr;
             gap: 15px;
             margin-top: 20px;
         }
 
-        .contact-form input, .contact-form textarea, .contact-form button {
+        .contact-form input,.contact-form textarea,.contact-form button {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #718096;
             border-radius: 5px;
             font-size: 1em;
+            background-color: #663399; /* Purple form input backgrounds */
+            color: #cbd5e0;
         }
 
         .contact-form textarea {
-            height: 150px; /* Example textarea height */
+            height: 150px;
         }
 
         .contact-form button {
-            background-color: #eee;
-            color: #555;
+            background-color: #1a202c;
+            color: #a0aec0;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .contact-form button:hover {
-            background-color: #ddd;
+            background-color: #e53e3e;
         }
 
-        /* Responsive adjustments - similar to your original CSS but simplified for wireframe */
         @media (min-width: 768px) {
-            .gallery {
-                display: flex; /* Horizontal scroll on larger screens */
-            }
             .contact-form {
-                grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens for form fields */
-                max-width: 600px; /* Example max width for form */
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
                 margin-left: auto;
                 margin-right: auto;
             }
             .contact-form textarea {
-                grid-column: 1 / span 2; /* Textarea spans both columns */
+                grid-column: 1 / span 2;
             }
         }
     </style>
 </head>
-<body>
+<body class="dark:bg-gray-900 dark:text-gray-200">
 
 <header>
     <h1>Obscura Relic Alchemy</h1>
     <p>Tagline: Trade treasures, discover relics, and revive nostalgia.</p>
 </header>
 
-<section id="gallery-section">
-    <h2>Gallery</h2>
-    <div class="gallery">
-        <div class="gallery-item">Image Placeholder</div>
-        <div class="gallery-item">Image Placeholder</div>
-        <div class="gallery-item">Image Placeholder</div>
-        <div class="gallery-item">Image Placeholder</div>
-        <div class="gallery-item">Image Placeholder</div>
-        <div class="gallery-item">Image Placeholder</div>
+<section id="carousel-section-1">
+    <h2>Featured Relics Carousel 1</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="/public/doc.jpeg" alt="Doc tools"
+<!--                <p>Carousel Item 1<br><img src="public/doc.jpg"</p>-->
+            </div>
+            <div class="carousel-item">
+                <p>Carousel Item 2<br> (Image Placeholder)</p>
+            </div>
+            <div class="carousel-item">
+                <p>Carousel Item 3<br> (Image Placeholder)</p>
+            </div>
+            <div class="carousel-item">
+                <p>Carousel Item 4<br> (Image Placeholder)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="carousel-section-2">
+    <h2>Featured Finds Carousel 2</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <p>Carousel Item A<br> (Image Placeholder)</p>
+            </div>
+            <div class="carousel-item">
+                <p>Carousel Item B<br> (Image Placeholder)</p>
+            </div>
+            <div class="carousel-item">
+                <p>Carousel Item C<br> (Image Placeholder)</p>
+            </div>
+        </div>
     </div>
 </section>
 
